@@ -12,11 +12,11 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            background-color: brown;
+            background-color: #213f55;
             display: flex;
             flex-direction: column;
-
             align-items: center;
+            color: #DBDB70;
         }
         
         #italico
@@ -35,21 +35,14 @@
         {
             height: 100%;
         }
-        #faz
+
+        .bloco
         {
-            background-color: wheat;
-            width: 35%;
-
-            margin: 10px;
-
-        }
-
-        #naofaz
-        {
-            background-color: wheat;
-            width: 35%;
+            max-width: 300px;
+            text-align: center;
             margin: 10px;
         }
+
 
         #desfoque
         {
@@ -60,7 +53,9 @@
         {
             background-color: indigo;
             padding: 0 10px;
+            
             text-align: center;
+
 
         }
         #botao:hover
@@ -108,15 +103,17 @@
     </header>
 
     <main id="init">
-        <div id="faz">
+        <div class="bloco" id="faz">
             <p>Esse site usa o Javascript para pegar informações que qualquer outro site, com Javascript, consegue fazer.</p>
+            <p>Esse site irá pedir por algumas permissões, mas você não é obrigado a aceitar. Essas permissões irão ajudar a demonstrar ainda mais este estudo.</p>
         </div>
-        <div id="naofaz">
+        <div class="bloco" id="naofaz">
             <p>Esse site* <strong>NÃO</strong>  envia as infomações aqui coletadas para fora do seu navegador. <span id="desfoque">*O site está sendo hosteado no GitHub Pages, logo não posso confirmar que o GitHub não coleta informações. Para capturar o ip é usado uma API da Cloudfare, logo não posso confirmar que o Cloudfare não colete informações. </span> </p>
         </div>
-        <div id="branco"></div>
+        
     </main>
     <p id="tuto">Clique em "MOSTRAR" para ver o que eu sei sobre você.</p>
+    
     <main id="mrespostas">
         <h3>É isso o que da pra saber sobre seu computador no momento.</h3>
 
@@ -136,7 +133,7 @@
 
         <p>Microfone: <span class="resposta" id=""></span></p>
 
-        <p>: <span class="resposta" id=""></span></p>
+        <p>De onde você acessou este site: <span class="resposta" id="referer"></span></p>
         
         <p>: <span class="resposta" id=""></span></p>
 
@@ -147,10 +144,10 @@
     <div id="botao">
         <p>MOSTRAR</p>
     </div>
-    
+    <div id="branco"></div>
     <footer>
         <p>Caso não confie nesse site, você pode verificar, no inspetor de elementos do seu navegador, tudo o que este site faz. Também pode ir até o repositório, baixar o projeto e testar localmente.</p>
-        <p>Diretório no GitHub: <a referrerpolicy="no-referer" href="https://github.com/ussaohelcim/wikau">github.com/ussaohelcim/wikau</a></p>
+        <p>Repositório no GitHub: <a referrerpolicy="no-referer" href="https://github.com/ussaohelcim/wikau">github.com/ussaohelcim/wikau</a></p>
         <p id="logo">Feito, com medo, por ussaohelcim.</p>
     </footer>
     <script src="wikau.js"></script>

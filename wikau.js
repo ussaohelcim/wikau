@@ -36,6 +36,7 @@ function ApagarFirulas()
     document.querySelector("#botao").style.display="none"
     document.querySelector("#init").style.display="none"
     document.querySelector("#infos").style.display="none"
+
 }
 
 function pegarIp()

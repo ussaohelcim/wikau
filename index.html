@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What i know about you.</title>
+    <style>
+        html,body
+        {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: brown;
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+        }
+        
+        #italico
+        {
+            font-style: italic;
+        }
+        #init
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            align-items: stretch;
+        }
+        #branco
+        {
+            height: 100%;
+        }
+        #faz
+        {
+            background-color: wheat;
+            width: 35%;
+
+            margin: 10px;
+
+        }
+
+        #naofaz
+        {
+            background-color: wheat;
+            width: 35%;
+            margin: 10px;
+        }
+
+        #desfoque
+        {
+            color: gray;
+        }
+
+        #botao
+        {
+            background-color: indigo;
+            padding: 0 10px;
+            text-align: center;
+
+        }
+        #botao:hover
+        {
+            color: white;
+            cursor: pointer;
+        }
+        #mrespostas
+        {
+            display: none;
+        }
+        .resposta
+        {
+            color: yellow;
+            font-size: 16pt;
+            font-weight: 900;
+        }
+        #logo
+        {
+            bottom: 0;
+            text-align: center;
+        }
+        header
+        {
+            text-align: center;
+        }
+        #ipframe
+        {
+            height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <section id="titulo">
+            <h1>What i know about <span id="italico">you</span>.</h1>
+        </section>
+        <section id="infos">
+            <h3>"What i know about you" é um site que demonstra tudo o que posso saber de você com um simples site com Javascript.</h3>
+            <p>Javascript é a linguagem de programação padrão para se usar nos navegadores. Ela pode ser usada para melhorar a sua experiencia em um site, mas você já se perguntou as informações que o site pode obter de você só de entrar neles?</p>
+            <p>Este site demonstra isso, diversas informações sobre o seu computador obtidos apenas com o simples ato de entrar em um site.</p>
+        </section>
+        
+    </header>
+
+    <main id="init">
+        <div id="faz">
+            <p>Esse site usa o Javascript para pegar informações que qualquer outro site, com Javascript, consegue fazer.</p>
+        </div>
+        <div id="naofaz">
+            <p>Esse site* <strong>NÃO</strong>  envia as infomações aqui coletadas para fora do seu navegador. <span id="desfoque">*O site está sendo hosteado no GitHub Pages, logo não posso confirmar que o GitHub não coleta informações. Para capturar o ip é usado uma API da Cloudfare, logo não posso confirmar que o Cloudfare não colete informações. </span> </p>
+        </div>
+        <div id="branco"></div>
+    </main>
+    <p id="tuto">Clique em "MOSTRAR" para ver o que eu sei sobre você.</p>
+    <main id="mrespostas">
+        <h3>É isso o que da pra saber sobre seu computador no momento.</h3>
+
+        <p>Resolução da tela: <span class="resposta" id="resolucao"></span></p>
+
+        <p>Navegador: <span class="resposta" id="navegador"></span></p>
+
+        <p>Clipboard: <span class="resposta" id="clipboard">Não consegui pegar seu clipboard.</span></p>
+
+        <p>Sistema operacional: <span class="resposta" id="os"></span></p>
+
+        <p>IP: <span class="resposta" id="ip"><iframe id="ipframe" src="https://api.ipify.org/?format=txt" frameborder="0"></iframe></span></p>
+
+        <p>Celular ou computador?: <span class="resposta" id="mobile"></span></p>
+
+        <p>Camera: <div id="camera"></div></p>
+
+        <p>Microfone: <span class="resposta" id=""></span></p>
+
+        <p>: <span class="resposta" id=""></span></p>
+        
+        <p>: <span class="resposta" id=""></span></p>
+
+        <p>O site consegue essas informações apenas pedindo para o navegador.</p>
+        <h3>Imagine agora quantos dados as empresas tem sobre você.</h3>
+        <p>Bloqueie o Javascript do seu navegador</p>
+    </main>
+    <div id="botao">
+        <p>MOSTRAR</p>
+    </div>
+    
+    <footer>
+        <p>Caso não confie nesse site, você pode verificar, no inspetor de elementos do seu navegador, tudo o que este site faz. Também pode ir até o repositório, baixar o projeto e testar localmente.</p>
+        <p>Diretório no GitHub: <a referrerpolicy="no-referer" href="https://github.com/ussaohelcim/wikau">github.com/ussaohelcim/wikau</a></p>
+        <p id="logo">Feito, com medo, por ussaohelcim.</p>
+    </footer>
+    <script src="wikau.js"></script>
+</body>
+</html>
